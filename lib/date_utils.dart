@@ -4,7 +4,7 @@ String formatDateToDays(String date){
     DateTime taskDate=DateTime.parse(date);
     DateTime today=DateTime.now();
 
-    // to remove time part
+    // to remove time part(hours,minutes,seconds)
     taskDate = DateTime(taskDate.year, taskDate.month, taskDate.day);
     today = DateTime(today.year, today.month, today.day);
     int difference =taskDate.difference(today).inDays;

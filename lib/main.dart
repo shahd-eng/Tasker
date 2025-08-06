@@ -16,12 +16,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
        // textTheme: TextTheme(titleLarge: TextStyle(color: Colors.white)),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue,),
       ),
       home: Homepage(),
       routes: {
         "add_task":(context)=>AddTask(),
-
       },
 
     );

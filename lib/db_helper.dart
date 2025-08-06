@@ -29,7 +29,7 @@ class SqlDb {
   _onCreate(Database db, int version) async {
     Batch batch =db.batch();
 
-    batch.commit();
+
     batch.execute('''
    CREATE TABLE "tasks"(
    "id" INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT,

@@ -11,7 +11,6 @@ class AddTask extends StatefulWidget {
 
 class _AddTaskState extends State<AddTask> {
   SqlDb sqlDb = SqlDb();
-
   DateTime? selectedDate;
 
   TextEditingController taskController = TextEditingController();

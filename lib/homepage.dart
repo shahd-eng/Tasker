@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasker/add_task.dart';
 import 'package:tasker/date_utils.dart';
-import 'package:tasker/db_helper.dart'; // Import the new modal widget
+import 'package:tasker/db_helper.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -13,7 +13,6 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   SqlDb sqlDb = SqlDb();
   List tasks = [];
-  bool isLoading = true;
 
   String? dayNum; //  21
   String? monthName; //  AUG
@@ -21,8 +20,8 @@ class _HomepageState extends State<Homepage> {
   String? year; //2019
   Map<int, bool> checkedMap = {};
 
-  // Function to show the added task
-  void _showAddTask() async {
+  // function to show the added task
+  void _showAddedTask() async {
     final dynamic taskAdded = await showModalBottomSheet(
       context: context,
       isScrollControlled: true, // allows the modal to be larger
@@ -69,7 +68,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: _showAddTask,
+        onPressed: _showAddedTask,
         child: Icon(Icons.add),
       ),
 
